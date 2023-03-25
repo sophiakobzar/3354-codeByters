@@ -40,14 +40,6 @@ The class diagram for the NexMed health app is as follows:
 	•	HealthRecord has a 1-to-many relationship with Patient.
 	•	Payment has a 1-to-many relationship with Invoice.
 
-# Table of Contents
-  - [Demo](#demo)
-  - [User Stories](#user-stories)
-  - [Stack](#stack)
-  - [WorkFlow and Ticketing](#work-flow-and-ticketing)
-  - [Getting Started](#getting-started)
-  - [Contributors](#contributors)
-
 # Demo
  _coming soon... check back for updates!_
 
