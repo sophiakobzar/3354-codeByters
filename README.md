@@ -44,17 +44,17 @@ The class diagram for the NexMed health app is as follows:
  _coming soon... check back for updates!_
 
 # User Stories
-## To Implement
-	Based on the request of our client, we defined the following user stories:
-- As a user, I want to be able to create an account and sign in securely.
-- As a patient or doctor user, I want to see the doctors currently treating me.
-- As a patient or doctor user, I want to see the medications, treatments, surgeries and other helath records for pathology or patients.
-- As a user, I want to want to be able to log out
-- As a patient or doctor user, I want to be able to message my health team or my patient any questions or response to questions to keep close. communication.
-- As a doctor user, I want to edit the treatment as needed for my patients.
-- As a user, I want to set my payment and insurance method.
-- As a user, I want to be able to see in network facilities and providers covered by my insurance network.
-- As a user, I want to be notified when a new medication or new refill is ready for pickup or prescribed. 
+### To Implement
+#### Based on the request of our client, we defined the following user stories:
+	•	As a user, I want to be able to create an account and sign in securely.
+	•	As a patient or doctor user, I want to see the doctors currently treating me.
+	•	As a patient or doctor user, I want to see the medications, treatments, surgeries and other helath records for pathology or patients.
+	•	As a user, I want to want to be able to log out
+	•	As a patient or doctor user, I want to be able to message my health team or my patient any questions or response to questions to keep close. communication.
+	•	As a doctor user, I want to edit the treatment as needed for my patients.
+	•	As a user, I want to set my payment and insurance method.
+	•	As a user, I want to be able to see in network facilities and providers covered by my insurance network.
+	•	As a user, I want to be notified when a new medication or new refill is ready for pickup or prescribed. 
 
 # Stack
  _coming soon... check back for updates!_
