@@ -15,11 +15,11 @@ public class NexMedMain {
 		case 1:
 			System.out.println("What is the doctor's username and password");
 			System.out.print("Username: ");
-			userName =input.next();
+			userName =input.next(); // get the user name from user
 			System.out.print("Password: ");
-			password =input.next();
+			password =input.next(); // get the password
 			System.out.println("checking creditionals ...");
-			validation = checkcreditionalsDoctor(userName, password);
+			validation = checkcreditionalsDoctor(userName, password); // check if password and username is correct 
 			if(!validation)
 			{
 				System.out.println("Wrong creditional");
@@ -66,10 +66,8 @@ public class NexMedMain {
 		{
 			if(UN.equals(ValidUserName[i]))
 			{
-				System.out.println("Username is valid");
 				if(PW.equals(ValidPassWord[i]))
 				{
-					System.out.println("Password is valid");
 					return true;
 				}
 			}
