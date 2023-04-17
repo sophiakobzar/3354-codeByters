@@ -6,9 +6,9 @@ public class NexMedMain {
 		// the variable that holds if the persons is a doctor or patient
 		int doctorOrPatient; 
 		boolean validation;
-		String userName, password;
-		System.out.print("Hello welcome to NexMed are you a (1) doctor or (2) patient? ");
+		String userName, password;		
 		Scanner input =new Scanner(System.in); //Scanner to read input
+		System.out.print(signInPage());
 		doctorOrPatient =input.nextInt();
 		switch(doctorOrPatient) 
 		{
@@ -26,8 +26,12 @@ public class NexMedMain {
 				break;
 			}
 			System.out.println("validation complete");
-			NexMedMain Doctor =new NexMedMain();
-			Doctor.collectDoctorData(userName);
+			System.out.println(printDataDoctor(locationOfData,0));
+			System.out.println(printDataDoctor(locationOfData,1));
+
+			//NexMedMain Doctor =new NexMedMain();
+			//Doctor.collectDoctorData(userName);
+			
 			break;
 		
 		case 2:
@@ -44,8 +48,10 @@ public class NexMedMain {
 				break;
 			}
 			System.out.println("validation complete");
-			NexMedMain Patient=new NexMedMain();
-			Patient.collectPatientData(userName);
+			//NexMedMain Patient=new NexMedMain();
+			//Patient.collectPatientData(userName);
+			System.out.println(printDataPatient(locationOfData,0));
+			System.out.println(printDataPatient(locationOfData,1));
 			break;
 		
 		default:
@@ -57,17 +63,20 @@ public class NexMedMain {
 		System.exit(0);
 	}
 			
-	
+	static int locationOfData;
+	static String[][] dataOfDoctor = {{"06/17/1980", "Washington"}, {"07/11/1990","Texas"}}; //DOB and office location
+	static String[][] dataOfPatient = {{"10/31/2001","Gluten and Penicillin"}, {"02/12/1970","none"}};
 	public static boolean checkcreditionalsDoctor(String UN, String PW)
 	{
-		String[] ValidUserName = {"SosaWorld", "Doc"};
-		String[] ValidPassWord = {"1234", "4321"};
+		String[] ValidUserName = {"SosaWorld", "Doc"}; //userName
+		String[] ValidPassWord = {"1234", "4321"}; // password
 		for(int i = 0; i<=1; i++)
 		{
 			if(UN.equals(ValidUserName[i]))
 			{
 				if(PW.equals(ValidPassWord[i]))
 				{
+					locationOfData = i;
 					return true;
 				}
 			}
@@ -85,6 +94,7 @@ public class NexMedMain {
 			{
 				if(PW.equals(ValidPassWord[i]))
 				{
+					locationOfData = i;
 					return true;
 				}
 			}
@@ -93,6 +103,30 @@ public class NexMedMain {
 		
 	}
 	
+	public static String printDataDoctor(int i, int k)
+	{
+		String toReturn = null;
+		if(k == 0)
+			toReturn = "Doctor's DOB: " + dataOfDoctor[i][k];
+		else if(k ==1)
+			toReturn = "Location Of the doctor's office " + dataOfDoctor[i][k];
+		return toReturn;
+
+	}
+	public static String printDataPatient(int i, int k)
+	{
+		String toReturn = null;
+		if(k == 0)
+			toReturn = "Patient's DOB: " + dataOfPatient[i][k];
+		else if(k ==1)
+			toReturn = "Patient's know allergy: " + dataOfPatient[i][k];
+		return toReturn;
+
+	}
+	public static String signInPage()
+	{
+		return "Hello welcome to NexMed are you a (1) doctor or (2) patient?" ;
+	}
 	String[] collectPatientData(String name)
 	{
 		
